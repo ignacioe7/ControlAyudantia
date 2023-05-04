@@ -14,7 +14,9 @@ public class Entrenador {
     private int idEntrenador;
     private String nombreEntrenador;
     private ArrayList<Pokemon> pokemonesBatalla;
+    public Mochila mochila = new Mochila();
 
+    
     public Entrenador(int idEntrenador, String nombreEntrenador, ArrayList<Pokemon> pokemonesBatalla) {
         this.idEntrenador = idEntrenador;
         this.nombreEntrenador = nombreEntrenador;
@@ -35,7 +37,10 @@ public class Entrenador {
     public ArrayList<Pokemon> getPokemonesBatalla() {
         return pokemonesBatalla;
     }
-
+    
+    public Mochila getMochila() {
+        return mochila;
+    }
     public void setIdEntrenador(int idEntrenador) {
         this.idEntrenador = idEntrenador;
     }
@@ -46,6 +51,10 @@ public class Entrenador {
 
     public void setPokemonesBatalla(ArrayList<Pokemon> pokemonesBatalla) {
         this.pokemonesBatalla = pokemonesBatalla;
+    }
+
+    public void setMochila(Mochila mochila) {
+        this.mochila = mochila;
     }
     
     

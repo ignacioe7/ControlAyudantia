@@ -1,13 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.mavenproject1;
 
-/**
- *
- * @author Sala-2-11-PC02
- */
-public class Mochila {
+
+public class Mochila extends Inventario{
+
+    
+    public Mochila() {
+    }
+
+    public Mochila(int capacidad) {
+        super(capacidad);
+    }
+
+    
+    public void usar(int id){
+        for(int i=0; i<super.getListaObjetos().size(); i++){
+            if(super.getListaObjetos().get(i).getIdObjeto()==id){
+                System.out.println("Objeto usado" + super.getListaObjetos().get(i).getNombre());
+                super.getListaObjetos().remove(i);
+                
+            }
+        }
+    }
+    
+    
     
 }

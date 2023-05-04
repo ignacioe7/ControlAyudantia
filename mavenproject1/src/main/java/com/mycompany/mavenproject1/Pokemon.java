@@ -1,23 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.mavenproject1;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Estudiante
- */
 public class Pokemon extends Interactuables{
     
     private Tipo_Pokemon tipoPokemon;
     private ArrayList<Habilidad> ataques;
     private int vida;
     private int nivel;
-    
 
+    public Pokemon(Tipo_Pokemon tipoPokemon, ArrayList<Habilidad> ataques, int vida, int nivel) {
+        this.tipoPokemon = tipoPokemon;
+        this.ataques = ataques;
+        this.vida = vida;
+        this.nivel = nivel;
+    }
+    
+    
+    
     public Pokemon(Tipo_Pokemon tipoPokemon, ArrayList<Habilidad> ataques, int vida, int nivel, int IdObjeto, String nombre) {
         super(IdObjeto, nombre);
         
@@ -50,7 +51,7 @@ public class Pokemon extends Interactuables{
     public int getNivel() {
         return nivel;
     }
-
+    
     public void setTipoPokemon(Tipo_Pokemon tipoPokemon) {
         this.tipoPokemon = tipoPokemon;
     }
