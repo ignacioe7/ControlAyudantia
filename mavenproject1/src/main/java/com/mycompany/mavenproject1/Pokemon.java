@@ -3,34 +3,24 @@ package com.mycompany.mavenproject1;
 
 import java.util.ArrayList;
 
-public class Pokemon extends Interactuables{
+public class Pokemon implements Interactuable{
     
     private Tipo_Pokemon tipoPokemon;
     private ArrayList<Habilidad> ataques;
     private int vida;
     private int nivel;
+    private int id;
+    private String nombre;
 
-    public Pokemon(Tipo_Pokemon tipoPokemon, ArrayList<Habilidad> ataques, int vida, int nivel) {
+    public Pokemon(Tipo_Pokemon tipoPokemon, ArrayList<Habilidad> ataques, int vida, int nivel, int id, String nombre) {
         this.tipoPokemon = tipoPokemon;
         this.ataques = ataques;
         this.vida = vida;
         this.nivel = nivel;
+        this.id = id;
+        this.nombre = nombre;
     }
     
-    
-    
-    public Pokemon(Tipo_Pokemon tipoPokemon, ArrayList<Habilidad> ataques, int vida, int nivel, int IdObjeto, String nombre) {
-        super(IdObjeto, nombre);
-        
-        this.tipoPokemon = tipoPokemon;
-        this.ataques = ataques;
-        this.vida = vida;
-        this.nivel = nivel;
-    }
-
-    
-    
-
     public Pokemon() {
     }
     
@@ -51,6 +41,16 @@ public class Pokemon extends Interactuables{
     public int getNivel() {
         return nivel;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+    
+    
     
     public void setTipoPokemon(Tipo_Pokemon tipoPokemon) {
         this.tipoPokemon = tipoPokemon;
@@ -66,6 +66,32 @@ public class Pokemon extends Interactuables{
 
     public void setNivel(int nivel) {
         this.nivel = nivel;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    
+    
+
+    @Override
+    public void imprimir() {
+        
+    }
+
+    @Override
+    public boolean usar() {
+        return false;
+    }
+
+    @Override
+    public void eliminar() {
+        
     }
     
     
